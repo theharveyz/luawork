@@ -20,3 +20,19 @@ setmetatable(tab_a, m_t)
 setmetatable(tab_b, m_t)
 a = tab_a + tab_b
 print(a, tab_a.a)
+
+
+-- __call: 使table可以实现像函数一样调用的功能
+local mytab = setmetatable({10}, {
+    __call = function(mytab, param1, param2, param3)
+        print('mytable第一项的值', mytab[1])
+        -- print(#params)
+        print(param1, param2, param3)
+        return param1, param2, param3, table.maxn({param1, param2, param3}) -- 返回多个值
+        -- table.maxn 返回table的项目数目
+    end
+})
+
+param1, param2, param3, max = mytab(1, 2, 3)
+print(param1)
+print(max)
