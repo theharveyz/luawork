@@ -134,3 +134,7 @@ print(pairs(_G))
 for k, v in pairs(_G) do
     print(k, v)
 end
+
+-- 只有 nil 和 false 为否
+print(nil ~= nil) -- false
+print(nil ~= false) -- true
