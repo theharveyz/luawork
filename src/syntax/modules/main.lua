@@ -4,7 +4,8 @@ a.test(1,2,3,4)
 
 a:test(1,2,3,4)
 
--- print(test.new())
+print(a.demo(a)) -- 点号
+print(a:demo()) -- 冒号调用
 
 -- 默认查找顺序：
 -- no field package.preload['test']
