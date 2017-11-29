@@ -138,3 +138,12 @@ end
 -- 只有 nil 和 false 为否
 print(nil ~= nil) -- false
 print(nil ~= false) -- true
+
+-- 函数调用方法:
+local _test = function ( ... )
+   print {...}
+end
+
+_test '1'
+_test '1'
+-- _test 1  ### int 和  bool 类型则必须加括号
