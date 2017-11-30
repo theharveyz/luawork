@@ -138,3 +138,16 @@ end
 -- 只有 nil 和 false 为否
 print(nil ~= nil) -- false
 print(nil ~= false) -- true
+
+print(1 and 2 or 3) -- 2
+print(0 and 2 or 3) -- 2
+print(false and 2 or 3) -- 3 类似于三元表达式
+print(1 or 2 or 3) -- 1
+print(false and 2) -- false
+
+-- 注意： 这里不是返回true or  false； 而是，如果是true，就返回后面的值， 否则返回false/nil
+print(1 and 2) -- 2
+print(true and 2) -- 2
+print(nil and 2) -- nil
+-- lua 
+
