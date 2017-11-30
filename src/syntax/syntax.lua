@@ -151,3 +151,16 @@ print(true and 2) -- 2
 print(nil and 2) -- nil
 -- lua 
 
+-- 函数调用方法:
+local _test = function ( ... )
+   print {...}
+end
+
+_test '1'
+_test '1'
+-- _test 1  ### int 和  bool 类型则必须加括号
+
+-- 换行语句, 类型 ``; 保留空格, 原样输出
+print [[
+    你好
+]]

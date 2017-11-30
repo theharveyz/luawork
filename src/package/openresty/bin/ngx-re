@@ -1,0 +1,9 @@
+#!/usr/bin/env resty
+require "luarocks.loader"
+package.path = "?/init.lua;"..package.path
+
+local ngx_re = ngx.re
+local m, err = ngx_re.match('test', "^t")
+ngx.say(type(m), #m)
+ngx.say(table.concat(m, ''))
+ngx.say("hello")
