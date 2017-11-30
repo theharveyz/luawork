@@ -164,3 +164,8 @@ _test '1'
 print [[
     你好
 ]]
+
+-- repeat
+repeat
+    print "至少执行一次"
+until true
